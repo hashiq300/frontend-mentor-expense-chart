@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-:root {
+body {
     --Soft-red: hsl(10, 79%, 65%);
     --Cyan: hsl(186, 34%, 60%);
     --Dark-brown: hsl(25, 47%, 15%);
@@ -17,6 +17,7 @@
 }
 
 body {
+    position: relative;
     display: flex;
     font-family: "DM Sans", sans-serif;
     height: 100vh;
@@ -102,7 +103,7 @@ body {
     position: relative;
     isolation: isolate;
     border-radius: 0.4rem;
-    transition: height 500ms cubic-bezier(0.25, 0.1, 0.5, 1.22);
+    transition: 500ms ease;
 }
 
 .bar > .day {
@@ -175,9 +176,13 @@ body {
 /* Attribution */
 
 .attribution {
-    font-size: 11px;
+    font-size: 0.8rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
     text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--Soft-red);
 }
