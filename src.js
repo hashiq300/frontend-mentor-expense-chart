@@ -18,8 +18,10 @@ async function setChart() {
     const maxExpense = findMaxAmount(expenses);
     bars.forEach((bar, index) => {
         const day = bar.querySelector(".day");
+        const price = bar.querySelector(".price");
         const percentage = expenses[index].amount / maxExpense;
         day.textContent = expenses[index].day;
+        price.textContent = "$" + Math.round(expenses[index].amount);
         bar.style.height = `${percentage * 10}rem`;
         if (maxExpense == expenses[index].amount)
             bar.style.backgroundColor = BlueColor;
